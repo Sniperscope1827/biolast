@@ -9,7 +9,10 @@ const app = new App(`Bot ${botToken}`, {
 		MESSAGE_DELETE: true,
 		MESSAGE_DELETE_BULK: true,
 		MESSAGE_UPDATE: true,
-		TYPING_START: true
+		TYPING_START: true,
+
+		// interactions are handled by slash-crate (disabling eris fixes conflicts)
+		INTERACTION_CREATE: true
 	},
 	allowedMentions: {
 		everyone: false,
