@@ -770,9 +770,9 @@ class CompanionCommand extends CustomSlashCommand<'companion'> {
 									return
 								}
 
-								const maxHeal = Math.min(companionRow.hunger, foundItem.item.reducesHunger)
-								const companionNewLevel = this.getCompanionLevel(companionRow.xp + foundItem.item.xpGiven, companionRow.level)
-								let display = `${icons.checkmark} You fed ${preCompanion.icon} **${getCompanionDisplay(preCompanion, companionRow, true)}** your ${getItemDisplay(foundItem.item)}. They gained ${icons.xp_star}***+${foundItem.item.xpGiven}*** xp!`
+								const maxHeal = Math.min(companionRowV.hunger, foundItem.item.reducesHunger)
+								const companionNewLevel = this.getCompanionLevel(companionRowV.xp + foundItem.item.xpGiven, companionRowV.level)
+								let display = `${icons.checkmark} You fed ${preCompanion.icon} **${getCompanionDisplay(preCompanion, companionRowV, true)}** your ${getItemDisplay(foundItem.item)}. They gained ${icons.xp_star}***+${foundItem.item.xpGiven}*** xp!`
 
 								if (!foundItem.row.durability || foundItem.row.durability - 1 <= 0) {
 									await deleteItem(transaction.query, foundItem.row.id)
@@ -782,15 +782,15 @@ class CompanionCommand extends CustomSlashCommand<'companion'> {
 									await lowerItemDurability(transaction.query, foundItem.row.id, 1)
 								}
 
-								if (companionRow.level !== companionNewLevel) {
-									display += `\n\n**${getCompanionDisplay(preCompanion, companionRow, true)} leveled up!** (Lvl. **${companionRow.level}** → **${companionNewLevel}**)`
-									await increaseLevel(transaction.query, ctx.user.id, companionNewLevel - companionRow.level)
-									companionRow.skillPoints += companionNewLevel - companionRow.level
+								if (companionRowV.level !== companionNewLevel) {
+									display += `\n\n**${getCompanionDisplay(preCompanion, companionRowV, true)} leveled up!** (Lvl. **${companionRowV.level}** → **${companionNewLevel}**)`
+									await increaseLevel(transaction.query, ctx.user.id, companionNewLevel - companionRowV.level)
+									companionRowV.skillPoints += companionNewLevel - companionRowV.level
 								}
 
-								companionRow.level = companionNewLevel
-								companionRow.xp += foundItem.item.xpGiven
-								companionRow.hunger -= maxHeal
+								companionRowV.level = companionNewLevel
+								companionRowV.xp += foundItem.item.xpGiven
+								companionRowV.hunger -= maxHeal
 
 								if (maxHeal > 0) {
 									await lowerHunger(transaction.query, ctx.user.id, maxHeal)
@@ -803,7 +803,7 @@ class CompanionCommand extends CustomSlashCommand<'companion'> {
 								await foodMessage.delete()
 								await buttonCtx.editParent({
 									content: display,
-									embeds: [this.getCompanionEmbed(ctx.member || ctx.user, preCompanion, companionRow, companionFetchCD).embed]
+									embeds: [this.getCompanionEmbed(ctx.member || ctx.user, preCompanion, companionRowV, companionFetchCD).embed]
 								})
 							}
 						}
