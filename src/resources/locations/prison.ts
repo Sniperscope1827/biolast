@@ -25,6 +25,7 @@ export const prison: Location = {
 			quotes: [
 				'We will restore order!',
 				'Soon I will have my own army of undead, there will be no stopping me!'
+				'*You hear the shackling of keys*'
 			],
 			armor: items.steel_armor,
 			helmet: items.steel_helmet,
@@ -48,6 +49,33 @@ export const prison: Location = {
 			item: items.metal_shank
 		}
 	],
+	miniboss: {
+		cooldown: 60 * 20,
+		npc: {
+			type: 'raider',
+			display: 'Corrupted Guardian',
+			health: 150,
+			damage: 40,
+			drops: {
+				common: [items['mossberg_500'], items['swat_helmet'], items['swat_armor'], items['trauma_kit'],
+				uncommon: [items['12-guage_AP_slug'], items['cell_key'],
+				rare: [items['steel_armor'], items['steel_helmet'],
+				rolls: 3
+			},
+			weapon: items.mossberg_500,
+			ammo: items['12-guage_slug'],
+			quotes: [
+				'*You hear the shackling of keys*',
+				'What are you doing out of your cell?',
+				'Thou shall only fear the punishment I bring.',
+				'WHAT ARE YOU DOING HERE!?!?!'
+			],
+			armor: items.swat_armor,
+			helmet: items.swat_helmet,
+			xp: 1250,
+			boss: true
+		}
+	},
 	huntMobs: [
 		{
 			type: 'walker',
