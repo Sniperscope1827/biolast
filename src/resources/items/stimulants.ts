@@ -86,5 +86,41 @@ export const stimulants = stimulantsObject({
 		},
 		speed: 30,
 		artist: '719365897458024558'
+	},
+	fentanyl: {
+		type: 'Stimulant',
+		name: 'fentanyl',
+		icon: '<:syringe:886561670812549130>',
+		description: 'Someone must have left the drug safe open.',
+		aliases: ['fent'],
+		sellPrice: 1069,
+		slotsUsed: 1,
+		itemLevel: 10,
+		durability: 1,
+		effects: {
+			damageBonus: -10,
+			accuracyBonus: 0,
+			damageTaken: -40
+		},
+		speed: 30,
+		artist: '719365897458024558'
+	},
+	cocaine: {
+		type: 'Stimulant',
+		name: 'cocaine',
+		icon: '<:syringe:886561670812549130>',
+		description: 'Why is this in a hospital?',
+		aliases: ['coc'],
+		sellPrice: 967,
+		slotsUsed: 1,
+		itemLevel: 9,
+		durability: 1,
+		effects: {
+			damageBonus: 20,
+			accuracyBonus: 10,
+			damageTaken: 0
+		},
+		speed: 30,
+		artist: '719365897458024558'
 	}
 })
