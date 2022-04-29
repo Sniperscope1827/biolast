@@ -38,7 +38,7 @@ export const ammunition = ammoObject({
 		description: 'Full metal jacket 5.56x45mm NATO ammunition for rifles.',
 		damage: 40,
 		penetration: 4.3,
-		ammoFor: [ranged.m4a1],
+		ammoFor: [ranged.m4a1,ranged['tar-21']],
 		sellPrice: 867,
 		slotsUsed: 1,
 		itemLevel: 15
@@ -51,7 +51,7 @@ export const ammunition = ammoObject({
 		description: 'Hollow point 5.56x45mm NATO ammunition for rifles.',
 		damage: 45,
 		penetration: 3.7,
-		ammoFor: [ranged.m4a1],
+		ammoFor: [ranged.m4a1,ranged['tar-21']],
 		sellPrice: 602,
 		slotsUsed: 1,
 		itemLevel: 12
@@ -64,7 +64,7 @@ export const ammunition = ammoObject({
 		description: 'Full metal jacket 7.62x39mm ammunition.',
 		damage: 45,
 		penetration: 3.8,
-		ammoFor: [ranged['ak-47']],
+		ammoFor: [ranged['ak-47'],ranged.an94],
 		sellPrice: 623,
 		slotsUsed: 1,
 		itemLevel: 13
@@ -77,7 +77,7 @@ export const ammunition = ammoObject({
 		description: 'Hollow point 7.62x39mm ammunition.',
 		damage: 44,
 		penetration: 2.7,
-		ammoFor: [ranged['ak-47']],
+		ammoFor: [ranged['ak-47'],ranged.an94],
 		sellPrice: 510,
 		slotsUsed: 1,
 		itemLevel: 11
@@ -363,5 +363,18 @@ export const ammunition = ammoObject({
 		sellPrice: 5575,
 		slotsUsed: 1,
 		itemLevel: 17
-	}
+	},
+	'.50 AE Bullet': {
+		type: 'Ammunition',
+		name: '.50 AE Bullet',
+		icon: '<:U_ammo:601366669318815745>',
+		aliases: ['.50','ae'],
+		description: '50 caliber Action Express round',
+		damage: 70,
+		penetration: 4.5,
+		ammoFor: [ranged['desert eagle']],
+		sellPrice: 3012,
+		slotsUsed: 1,
+		itemLevel: 18
+	},
 })

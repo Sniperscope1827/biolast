@@ -256,5 +256,48 @@ export const ranged = rangedObject({
 		accuracy: 91,
 		itemLevel: 18,
 		speed: 13
-	}
+	},
+	'an94': {
+		type: 'Ranged Weapon',
+		name: 'an94',
+		description: 'Assault rifle chambered for the 7.62×39mm cartridge. Highly accurate and fast.',
+		icon: '<:ak47:933852988416618496>',
+		aliases: ['an', '94'],
+		sellPrice: 8369,
+		durability: 9,
+		slotsUsed: 3,
+		accuracy: 90,
+		itemLevel: 19,
+		speed: 34,
+		artist: '699166377705078794'
+	},
+	'desert eagle': {
+		type: 'Ranged Weapon',
+		name: 'desert eagle',
+		description: 'Most popular high caliber handgun of choice. Shoots slowly but accurately.',
+		icon: '<:ak47:933852988416618496>',
+		aliases: ['deagle'],
+		sellPrice: 5000,
+		durability: 5,
+		slotsUsed: 2,
+		accuracy: 85,
+		itemLevel: 18,
+		speed: 5,
+		artist: '699166377705078794'
+	},
+	'tar-21': {
+		type: 'Ranged Weapon',
+		name: 'tar-21',
+		description: 'Israeli bullpup assault rifle  with a selective fire system, selecting between semi-automatic mode and full automatic fire mode.',
+		icon: '<:ak47:933852988416618496>',
+		aliases: ['tar', '21'],
+		sellPrice: 2242,
+		durability: 15,
+		slotsUsed: 5,
+		accuracy: 95,
+		itemLevel: 21,
+		speed: 40,
+		artist: '699166377705078794'
+	},
+	
 })

@@ -9,26 +9,26 @@ export const prison: Location = {
 		cooldown: 60 * 60 * 2,
 		npc: {
 			type: 'raider',
-			display: 'Warden James',
-			health: 750,
-			damage: 50,
+			display: 'The Surgeon',
+			health: 1000,
+			damage: 45,
 			drops: {
-				common: [items.trauma_kit, items['12-gauge_AP_slug'], items['5.56x45mm_FMJ_bullet'], items.steel_armor, items.steel_helmet],
-				uncommon: [items.morphine, items.adrenaline],
-				rare: [items.benelli_M4],
-				rolls: 5
+				common: [items.trauma_kit, items['benelli_M4'], items['5.56x45mm_FMJ_bullet'], items.polyethylene_armor, items.polyethylene_helmet],
+				uncommon: [items['desert eagle']],
+				rare: [items['tar-21']],
+				rolls: 7
 			},
-			weapon: items.m4a1,
-			ammo: items['5.56x45mm_HP_bullet'],
-			usesStimulants: [items.morphine],
-			usesHeals: [items.hyfin_chest_seal],
+			weapon: items['tar-21'],
+			ammo: items['5.56x45mm_FMJ_bullet'],
+			usesStimulants: [items.adrenaline],
+			usesHeals: [items.trauma_kit],
 			quotes: [
-				'We will restore order!',
-				'Soon I will have my own army of undead, there will be no stopping me!'
+				'No need for a surgical strike to take care of you.',
+				'Come here, let me cure your misery!'
 			],
-			armor: items.steel_armor,
-			helmet: items.steel_helmet,
-			xp: 3000,
+			armor: items.polyethylene_armor,
+			helmet: items.polyethylene_helmet,
+			xp: 5000,
 			boss: true
 		}
 	},
@@ -51,18 +51,18 @@ export const prison: Location = {
 	huntMobs: [
 		{
 			type: 'walker',
-			display: 'Pack of Zombies',
-			health: 100,
-			damage: 45,
+			display: 'Zombie Doctor',
+			health: 200,
+			damage: 40,
 			drops: {
-				common: [items.pizza_slice],
-				uncommon: [items['20-gauge_buckshot'], items['9mm_AP_bullet']],
-				rare: [items.bobwhite_g2],
+				common: [items['trauma_kit']],
+				uncommon: [items['5.56x45mm_HP_bullet'], items['12-gauge_slug']],
+				rare: [items.mossberg_500],
 				rolls: 3
 			},
-			xp: 100,
-			chanceToBite: 25,
-			attackPenetration: 2.5,
+			xp: 200,
+			chanceToBite: 45,
+			attackPenetration: 3.5,
 			boss: false
 		},
 		{
